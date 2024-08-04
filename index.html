@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Space Shooters</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Multiplayer space invaders" />
+
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+        
+        #gameContainer {
+            position: relative;
+            width: 80vw;
+            height: 80vh;
+        }
+        
+        #scoreboard {
+            position: absolute;
+            z-index: 10;
+            color: white;
+            font-size: 30px;
+            margin: 0;
+            font-weight: bolder;
+            top: 10px;
+            left: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: none;
+        }
+        
+        canvas {
+            display: block;
+            background-color: black;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="gameContainer">
+
+        <canvas></canvas>
+
+        <p id="scoreboard">
+            <span>Score:</span>
+            <span id="score">0</span>
+        </p>
+
+        <!-- start screen -->
+        <div id="startScreen" style="
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: url('assets/startScreenBackground.png') no-repeat center center;
+            z-index: 20;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            justify-items: center;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            ">
+
+            <div style="text-align: center; justify-content: center; position: relative;">
+
+                <div id="startButton" style="cursor: pointer;  position: relative; display: inline-block; 
+                background-color: transparent; bottom: -15vh;">
+                    <img src="assets/button.png" alt="start button" style="height: 50px; width: 200px;" />
+                    <span style="position: absolute; color: white; top: 50%; 
+                transform: translate(-50%, -70%); left: 50%;">Start Game</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- end screen -->
+        <div id="endScreen" style="
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: url('assets/endScreenBackground.png') no-repeat center center;
+            z-index: 20;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            justify-items: center;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            ">
+
+            <div style="text-align: center; justify-content: center; position: relative;">
+
+
+
+
+                <div style="background-color: transparent; position: relative; top: 12vh; display: block;">
+                    <h1 style="color: red; font-weight: bold;">Your Score:</h1>
+                    <h2 id="highest_score" style="color: red; font-weight: bold;"></h2>
+                </div>
+
+                <div id="restartButton" style="cursor: pointer;  position: relative; display: inline-block;
+                background-color: transparent; bottom: -15vh;">
+
+                    <img src="assets/button.png" alt="restart button" style="height: 50px; width: 200px;" />
+                    <span style="position: absolute; color: white; top: 50%; 
+                transform: translate(-50%, -70%); left: 50%;">Restart Game</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js" integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./audio.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
